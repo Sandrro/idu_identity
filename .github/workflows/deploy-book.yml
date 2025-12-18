@@ -32,7 +32,14 @@ jobs:
 
       - name: Build the book
         run: |
-          jupyter-book build .
+          jupyter-book build . --path-output _site
+          echo "== workspace =="
+          pwd
+          ls -la
+          echo "== _site =="
+          ls -la _site || true
+          echo "== _site/html =="
+          ls -la _site/html || true.
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
@@ -40,7 +47,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: _build/html
+          path: _site/html
 
   deploy:
     needs: build
