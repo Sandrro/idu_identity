@@ -26,19 +26,19 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install dependencies
+      - name: Install runtime + build dependencies
         run: |
           python -m pip install -U pip
           pip install -r requirements.txt
+          pip install -r requirements-build.txt
 
       - name: Build static HTML
         env:
-          # GitHub Pages для репозитория: https://<user>.github.io/<repo>/
-          # поэтому нужен BASE_URL="/<repo>" чтобы ссылки не ломались
           BASE_URL: "/${{ github.event.repository.name }}"
         run: |
           set -euxo pipefail
-          jupyter book --version
+          myst --version
+          jupyter book --version || true
           jupyter book build --html --strict
           ls -la _build
           ls -la _build/html
