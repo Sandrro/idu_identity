@@ -1,0 +1,9 @@
+repository:
+  url: https://github.com/Sandrro/idu_identity
+  branch: main
+
+launch_buttons:
+  colab_url: "https://colab.research.google.com"
+
+execute:
+  execute_notebooks: "off" 
