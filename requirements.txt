@@ -1,9 +1,18 @@
+# Build / book
+jupyter-book>=2.0.0
+
+# Notebooks / UI (если используете виджеты)
+ipywidgets>=8.0.0
+
+# Data
 pandas>=2.0.0
 numpy>=1.24.0
-ipywidgets>=8.0.0
+
+# Viz (если нужно)
 matplotlib>=3.7.0
 plotly>=5.20.0
 
+# Scraping
 requests>=2.31.0
 beautifulsoup4>=4.12.0
 lxml>=5.0.0

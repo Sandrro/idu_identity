@@ -1,5 +1,0 @@
-format: jb-book
-root: intro
-chapters:
-  - file: setup
-  - file: data/collect_texts

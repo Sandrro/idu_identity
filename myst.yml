@@ -1,0 +1,19 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+
+project:
+  title: "Городская идентичность: цифровой анализ текстов"
+  description: "Учебный Jupyter Book: сбор текстов (ВК/сайты/отзывы) и анализ компонентов городской идентичности без LLM."
+  github: Sandrro/idu_identity
+  # (опционально) кнопка запуска Jupyter-сессии (Binder/JupyterHub) в шапке страниц
+  # jupyter: true
+  toc:
+    - file: index.md
+    - file: setup.md
+    - title: Данные и сбор текстов
+      children:
+        - file: data/collect_texts.ipynb
+
+site:
+  template: book-theme
+  title: "IDU · Городская идентичность"
