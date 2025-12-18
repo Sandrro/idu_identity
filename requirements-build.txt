@@ -1,4 +1,5 @@
-mystmd>=1.0.0
+jupyter-book>=2.0.0
+mystmd>=1.7.0
 myst-nb>=1.1.0
 jupyter>=1.0.0
-jupyter-book>=2.0.0
+ipywidgets>=8.0.0

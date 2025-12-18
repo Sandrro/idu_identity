@@ -6,22 +6,19 @@ project:
   description: "Учебный Jupyter Book: сбор текстов (ВК/сайты/отзывы) и анализ компонентов городской идентичности без LLM."
   github: Sandrro/idu_identity
 
-  # ВКЛЮЧАЕТ:
-  # - “power” кнопку (in-page execution через Binder)
-  # - кнопку запуска Jupyter-сессии
+  toc:
+    - file: index.md
+    - file: setup.md
+    - title: "Данные и сбор текстов"
+      children:
+        - file: data/collect_texts.ipynb
+        - file: data/web_parser.ipynb
+
   jupyter:
     binder:
       url: https://mybinder.org
       repo: Sandrro/idu_identity
-      ref: main   # или HEAD, но main стабильнее
-
-  toc:
-    - file: intro.md
-    - file: setup.md
-    - title: Данные и сбор текстов
-      children:
-        - file: data/collect_texts.ipynb
-        - file: data/web_parser_buttons.ipynb
+      ref: main
 
 site:
   template: book-theme
