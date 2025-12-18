@@ -13,6 +13,7 @@ project:
     - title: Данные и сбор текстов
       children:
         - file: data/collect_texts.ipynb
+        - file: data/web_parser.ipynb
 
 site:
   template: book-theme
