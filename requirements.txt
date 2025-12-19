@@ -1,9 +1,9 @@
-pandas>=2.0.0
-numpy>=1.24.0
+pandas==2.2.2
+numpy==1.25.2
 requests>=2.31.0
 beautifulsoup4>=4.12.0
 lxml>=5.0.0
-tqdm>=4.66.0
+tqdm==4.64.1
 ipywidgets>=8.0.0
 openpyxl>=3.1.5
 soika @ git+https://github.com/Sandrro/SOIKA.git#egg=soika ; python_version < "3.12"
