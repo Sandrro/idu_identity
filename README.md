@@ -1,24 +1,19 @@
-# Городская идентичность — Jupyter Book
+# Городская идентичность
 
-Проект собирает учебные материалы и ноутбуки по анализу городской идентичности. Репозиторий настроен на сборку **Jupyter Book 2.x** (через `mystmd`) с интерактивными ячейками (Thebe) и кнопками запуска на MyBinder.
+Проект собирает учебные материалы и ноутбуки по анализу городской идентичности. Основная работа ведётся в одном ноутбуке, который импортирует скрипты из репозитория:
 
-## Облака для запуска
-- **Google Colab** — быстрый способ открыть ноутбуки без сборки окружения. Ссылки:
-  - [Collect texts — Open in Colab](https://colab.research.google.com/github/Sandrro/idu_identity/blob/main/data/collect_texts.ipynb)
-  - [Web parser — Open in Colab](https://colab.research.google.com/github/Sandrro/idu_identity/blob/main/data/web_parser.ipynb)
-- **MyBinder** — остаётся как запасной вариант, но может временно не запускаться из-за нестабильности сборки.
+- [idu_identity.ipynb](idu_identity.ipynb)
+- [Открыть в Google Colab](https://colab.research.google.com/github/Sandrro/idu_identity/blob/main/idu_identity.ipynb)
 
 ## Структура
-- `index.md` — главная страница курса.
-- `setup.md` — подготовка окружения и вводные сведения.
-- `data/collect_texts.ipynb` — сбор и первичная обработка текстов.
-- `data/web_parser.ipynb` — пример парсинга данных с сайтов.
-- `myst.yml` — конфигурация MyST / Jupyter Book 2.x и оглавление книги.
+- `idu_identity.ipynb` — основной рабочий ноутбук, импортирует скрипты проекта.
+- `collect_texts_core.py` — функции для сбора и первичной обработки текстов.
+- `soika_vk_parser.py` — пример парсинга данных.
+- `data/` — дополнительные данные и примеры.
 
 ## Установка окружения
 1. Создайте виртуальное окружение Python 3.10+.
-2. Установите зависимости для запуска ноутбуков и сборки книги:
+2. Установите зависимости для запуска ноутбука:
    ```bash
    pip install -r requirements.txt
-   pip install -r requirements-build.txt
    ```
